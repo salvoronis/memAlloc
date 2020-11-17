@@ -18,7 +18,7 @@ int main(int argc, char * argv[]){
 	naruto->series = 500;
 	naruto->seasons = 2;
 
-	memalloc_debug_heap(stdout, HEAP_START);
+	//memalloc_debug_heap(stdout, HEAP_START);
 
 	struct anime * naruto1 = _malloc(sizeof(struct anime));
 	naruto1->id = 1234;
@@ -32,6 +32,8 @@ int main(int argc, char * argv[]){
 	struct anime * hsdxd = _malloc(sizeof(struct anime)-1);
 	hsdxd->id = 123;
 
-	struct anime * one_peace = _malloc(6*1024);
+	memalloc_debug_heap(stdout, HEAP_START);
+
+	struct anime * one_peace = _malloc(6*1024*1024);
 	one_peace->id = 124124;
 }
