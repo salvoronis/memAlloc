@@ -1,5 +1,5 @@
 CC = gcc
-SRC = src/test.c src/alloc.c
+SRC = src/test.c src/alloc.c src/mem_debug.c
 OUT = test
 
 all:
