@@ -11,7 +11,7 @@ static void * start;
 
 void *heap_init(size_t initial_size){
 	void * mem_pointer = mmap(HEAP_START,
-		initial_size/* + sizeof(struct mem)*/,
+		initial_size,
 		PROT_READ|PROT_WRITE,
 		MAP_PRIVATE|MAP_ANONYMOUS,
 		-1, 0);
